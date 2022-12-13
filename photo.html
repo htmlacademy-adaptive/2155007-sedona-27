@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="page">
+
+<head>
+  <meta charset="8-utf">
+  <title>Cедона</title>
+</head>
+
+<body class="page__body">
+  <header class="page_header">
+    <a class="page_header__logo logo">
+      <img class="logo__image" src="images/logo.svg" width="185" height="96" alt="Логотип Седоны.">
+    </a>
+    <nav class="page_nav">
+      <button class="page_nav__toggle" type="button">
+        <span class="visually_hidden">Открыть меню</span>
+      </button>
+      <div class="page_nav__container">
+        <ul class="page_nav__list site_list">
+          <li class="site_list__item">
+            <a class="site_list__link" href="index.html">Главная</a>
+          </li>
+          <li class="site_list__item">
+            <a class="site_list__link site_list__link--current">Фото и видео</a>
+          </li>
+          <li class="site_list__item">
+            <a class="site_list__link" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="site_list__item">
+            <a class="site_list__link" href="https://htmlacademy.ru">HTML Academy</a>
+          </li>
+        </ul>
+      </div>
+      <!--page_nav__container-->
+    </nav>
+  </header>
+  <main class="main_inner">
+    <section class="inner_header">
+      <div class="inner_header__container">
+        <img class="inner_header__image" src="images/sedona_inner.svg" width="229" height="39" alt="Sedona.">
+        <h1 class="inner_header__title">Фото и видео</h1>
+      </div><!--inner_header__container-->
+    </section>
+    <section class="photo_block">
+      <div class="photo_block__container">
+        <h2 class="visually_hidden">Фото Седоны.</h2>
+        <p class="photo_block__intro">
+          Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
+        </p>
+        <ul class="photo_list">
+          <li class="photo_list__item">
+            <a class="photo_list__link" href="#">
+              <img class="photo__image" src="images/peoples_spaces.jpg" width="280" height="280" alt="Дорога .посреди зелени на фоне вечернего заката и скалистых холмов.">
+              <h2 class="photo__title">Народные просторы</h2>
+              <p class="photo__author">Автор фото: Борис</p>
+              <b class="photo__like">
+                <span class="visually_hidden">понравилось</span>
+                1350
+                <span class="visually_hidden">людям</span>
+              </b>
+            </a>
+          </li>
+          <li class="photo_list__item">
+            <a class="photo_list__link" href="#">
+              <img class="photo__image" src="images/local_vegetation.jpg" width="280" height="280" alt="Местная растительность на фоне скал">
+              <h2 class="photo__title">Местная растительность</h2>
+              <p class="photo__author">Автор фото: Сергей</p>
+              <b class="photo__like">
+                <span class="visually_hidden">понравилось</span>
+                143
+                <span class="visually_hidden">людям</span>
+              </b>
+            </a>
+          </li>
+          <li class="photo_list__item">
+            <a class="photo_list__link" href="#">
+              <img class="photo__image" src="images/the_road_to_the_north.jpg" width="280" height="280" alt="Дорога_проходящая скволь красивый вечнозеленый лес.">
+              <h2 class="photo__title">Дорога на север</h2>
+              <p class="photo__author">Автор фото: Петр</p>
+              <b class="photo__like">
+                <span class="visually_hidden">понравилось</span>
+                96
+                <span class="visually_hidden">людям</span>
+              </b>
+            </a>
+          </li>
+          <li class="photo_list__item">
+            <a class="photo_list__link" href="#">
+              <img class="photo__image" src="images/devils_bridge.jpg" width="280" height="280" alt="Мост Дьявола.">
+              <h2 class="photo__title">Мост Дьявола</h2>
+              <p class="photo__author">Автор фото: Антон</p>
+              <b class="photo__like">
+                <span class="visually_hidden">понравилось</span>
+                254
+                <span class="visually_hidden">людям</span>
+              </b>
+            </a>
+          </li>
+        </ul>
+      </div><!--photo_block__container-->
+    </section>
+    <section class="video_block">
+      <div class="video_block__container">
+        <h2 class="visually_hidden">Видео Седоны.</h2>
+        <p class="video_title">Все еще сомневаетесь?</p>
+        <p class="video_intro">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <video src=""></video>
+      </div><!--video_block__container-->
+    </section>
+  </main>
+  <footer class="page_footer">
+    <div class="page_footer__container">
+      <section class="hashtag">
+        <h2 class="visually_hidden">Посети Седону</h2>
+        <p class="hashtag__description">#visitSedona</p>
+      </section>
+      <section class="social">
+        <h2 clas="visually_hidden">Вы можете найти нас в следующих социальных сетях</h2>
+        <div class="social__block">
+          <a class="social__link social__link--vk" href="#">
+            <span class="visually_hidden">В Контакте.</span>
+          </a>
+          <a class="social__link social__link--telegram" href="#">
+            <span class="visually_hidden">Телеграм.</span>
+          </a>
+          <a class="social__link social__link--youtube" href="#">
+            <span class="visually_hidden">Ютюб.</span>
+          </a>
+        </div>
+      </section>
+      <section class="copyright">
+        <h2 class="visually_hidden">Авторские права на сайт.</h2>
+        <a class="copyright__link" href="https://htmlacademy.ru">
+          Разработано
+          <span class="visually_hidden">htmlacademy.</span>
+        </a>
+      </section>
+    </div><!--page_footer__container-->
+  </footer>
+</body>
+
+</html>
