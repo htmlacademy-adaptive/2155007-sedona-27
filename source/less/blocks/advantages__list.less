@@ -1,0 +1,59 @@
+.advantages__list {
+  .list-style()
+}
+
+/*.advantages__wrapper {
+  &--house {
+    .advantages__title::before{}
+  }
+  &--food {
+    .advantages__title::before{}
+  }
+  &--souvenirs {
+    .advantages__title::before{}
+  }
+}*/
+
+.advantages__wrapper {
+  &--with-image{
+    background-color: #81B3D2;
+  }
+  &--without-image{
+    background-color: #D6D6D6;
+  }
+}
+
+.advantages__card-wrapper {
+  padding: 54px 18px 40px;
+  box-sizing: border-box;
+}
+
+.advantages__title {
+  .margin(0px, 11px);
+  .font(18px, 26px, 700);
+  .color-title();
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages__number {
+  .margin(0px, 16px);
+  .font(14px, 21px, 400);
+  .color-description();
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages__description  {
+  .margin(0px, 0px);
+  .font(14px, 21px, 400);
+  .color-description();
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages__image {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+}
