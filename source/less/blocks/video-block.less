@@ -1,14 +1,35 @@
 .video__title {
   .margin(0px, 50px);
   .font(18px, 26px, 700);
-  .color-title();
+  color: @color-title;
   text-align: center;
   text-transform: uppercase;
 }
 .video__intro {
   .margin(0px, 0px);
   .font(14px, 21px, 400);
-  .color-description();
+  color: @color-description;
   text-align: center;
   text-transform: uppercase;
+}
+
+
+
+@media (min-width: @tablet-width) {
+  .video-block__text-container {
+    padding: 58px 101px 66px;
+  }
+  .video__image {
+    width: 648px;
+    height: 500px;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .video__image {
+    width: 800px;
+    height: 500px;
+  }
+
 }

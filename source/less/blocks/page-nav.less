@@ -1,8 +1,55 @@
 .page-nav__list {
   .list-style();
+  background-color: @blue;
 }
 
-.page-nav__link {
+.page-nav__link{
   .font(18px, 26px, 700);
+  color: #ffffff;
   text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .page-nav__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .page-nav__list {
+    background-color: #ffffff;
+  }
+
+  .nav-list-part-one {
+    width: 256px;
+  }
+
+  .nav-list-part-two {
+    width: 256px;
+  }
+
+  .page-nav__link {
+    .font(14px, 21px, 700);
+    color: #000000;
+  }
+
+  .page-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-nav__container {
+    width: 1200px;
+  }
+
+  .nav-list-part-one {
+    width: 480px;
+  }
+
+  .nav-list-part-two {
+    width: 480px;
+  }
+
 }

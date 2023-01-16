@@ -1,54 +1,50 @@
+.form-fieldsets {
+  display: grid;
+}
+
 .fieldset-personal-data {
   .fieldset();
-  padding: 24px 20px 39px;
-}
-
-.fieldset-contacts {
-  .fieldset();
-  padding: 24px 20px 34px;
-}
-
-.fieldset-impression {
-  .fieldset();
-  padding: 24px 20px;
-}
-
-.fieldset-visited {
-  .fieldset();
-  padding: 24px 20px;
-}
-
-.textarea-emotions-wrapper {
-  padding: 24px 20px 56px;
-}
-
-.fieldset__title {
-  margin-bottom: 20px;
-  .font(18px, 26px, 700);
-  .color-title();
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .fieldset-personal-data__list {
   .list-style();
 }
 
+.fieldset-contacts {
+  .fieldset();
+}
+
 .fieldset-contacts__list {
   .list-style();
+}
+
+.fieldset-impression {
+  .fieldset();
 }
 
 .fieldset-impression__list {
   .list-style();
 }
 
+.fieldset-visited {
+  .fieldset();
+}
+
 .fieldset-visited__list{
   .list-style();
 }
 
+.fieldset__title {
+  margin-bottom: 20px;
+  .font(18px, 26px, 700);
+  color: @color-title;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .fieldset__label {
   .font(14px, 21px, 400);
-  .color-description();
+  color: @color-description;
   text-transform: uppercase;
 }
 
@@ -56,22 +52,24 @@
   padding: 16px 16px 16px 16px;
   margin-bottom: 16px;
   .font(18px, 26px, 700);
-  .color-title();
-  background-color: #F2F2F2;
+  color: @color-title;
+  background-color: @lightgrey;
   border: none;
   &:placeholder-shown {
-    .color-placeholder();
+    color: @color-placeholder;
   }
 }
 
 .control-label {
   .font(18px, 26px, 700);
-  .color-title();
+  color: @color-title;
 }
+/*textarea */
 
 .textarea {
+  width: 100%;
   .font(18px, 26px, 700);
-  .color-placeholder();
+  color: @color-placeholder;
   background-color: #F2F2F2;
   border:  none;
 }
@@ -79,8 +77,55 @@
 /* form-feedback__button*/
 .form-feedback__button {
   .font(21px, 26px, 700);
+  font-family: inherit;
   color: #ffffff;
+  text-transform: uppercase;
   padding: 16px 49px;
   background-color: #81B3D2;
   border: none;
+}
+
+
+@media (min-width: @tablet-width) {
+
+  .form-fieldsets {
+    grid-template-columns: 280px 298px;
+    row-gap: 48px;
+    column-gap: 70px;
+  }
+
+  .fieldset-impression {
+    grid-column: 1/-1;
+  }
+
+  .fieldset-visited {
+    grid-column:  1/-1;
+  }
+
+  .textarea-emotions-wrapper {
+    grid-column: 1/-1;
+  }
+
+  .form-feedback__button {
+    padding: 16px 71px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+
+  .form-fieldsets {
+    grid-template-columns: 430px 402px;
+    row-gap: 56px;
+    column-gap: 128px;
+  }
+
+  .fieldset__title {
+    margin-bottom: 28px;
+  }
+
+  .form-feedback__button {
+    padding: 16px 101px;
+  }
+
 }
