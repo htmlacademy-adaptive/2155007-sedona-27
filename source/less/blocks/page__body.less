@@ -26,11 +26,19 @@
   min-width: 320px;
   margin: 0;
   padding: 0;
+  min-height: 100%;
   font-family:"PT Sans", sans-serif;
   font-size: 14px;
   line-height: 21px;
   color: #000000;
   background-color: #ffffff;
+}
+
+.page__container {
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;;
 }
 
 .visually-hidden {
@@ -44,4 +52,22 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@media (min-width: @tablet-width) {
+    .page__container {
+    width: 768px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page__body {
+    background-color: #E7E5E5;;
+  }
+
+  .page__container {
+    width: 1280px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
 }

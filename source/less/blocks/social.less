@@ -4,10 +4,22 @@
 
 }
 .social__block {
-
+  display: flex;
+  flex-wrap: wrap;
+  width: 156px;
 }
 
 .social__link {
   width: 48px;
   height: 48px;
+  background-color: @blue;
+  &:not(:nth-child(3n+3)) {
+    margin-right: 6px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    margin-bottom: 0;
+  }
 }
