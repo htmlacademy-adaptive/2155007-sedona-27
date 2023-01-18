@@ -5,6 +5,7 @@
 .inner-header-photo__wrapper {
   padding: 30px 20px 16px;
 }
+
 .inner-header-photo__title {
   .margin(0px, 24px);
   .font(18px, 26px, 700);
@@ -19,4 +20,21 @@
   color: @color-description;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .inner-header-photo__wrapper {
+    padding: 66px 155px 67px;
+  }
+
+  .inner-header-photo__title {
+    .margin(0px, 24px);
+    .font(30px, 26px, 700);
+}
+}
+
+@media (min-width: @desktop-width) {
+  .inner-header-photo__wrapper {
+    padding: 104px 372px 69px 370px;
+  }
 }
