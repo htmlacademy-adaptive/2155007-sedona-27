@@ -1,5 +1,6 @@
 .page-nav {
   position: relative;
+  min-height: 56px;
 }
 
 //Конпка и ее состояния
@@ -133,38 +134,20 @@
   }
 
   .page-nav__container {
-    display: flex;
-    justify-content: space-between;
     margin: 0 auto;
   }
 
   .page-nav__list {
+    display: flex;
+    flex-direction: row;
     background-color: #ffffff;
   }
 
-  .nav-list-part-one {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 256px;
-    margin-right: 153px;
-  }
-
-  .nav-list-part-two {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 256px;
-  }
-
-  .page-nav__item {
-    min-width: 153px;
-  }
-
-  .page-nav__link {
+    .page-nav__link {
     padding: 0px;
     padding-top: 18px;
     padding-bottom: 17px;
+    min-width: 153px;
     .font(14px, 21px, 700);
     color: #000000;
     background-color: #ffffff;
@@ -185,15 +168,15 @@
     width: 1200px;
   }
 
-  .nav-list-part-one {
-    width: 480px;
+  .page-nav__item:nth-child(3) {
+    margin-left: 240px;
   }
 
-  .nav-list-part-two {
-    width: 480px;
-  }
-
-  .page-nav__item {
+  .page-nav__link {
     min-width: 240px;
+  }
+
+  .page-nav__link:nth-child(3) {
+    margin-left: 240px;
   }
 }

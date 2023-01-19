@@ -6,10 +6,10 @@
 .fieldset-personal-data {
   .fieldset();
   padding-bottom: 39px;
-  border-right: 1px solid #DBDBDB;
 }
 
 .fieldset-personal-data__list {
+  display: grid;
   .list-style();
 }
 
@@ -19,13 +19,13 @@
 }
 
 .fieldset-contacts__list {
+  display: grid;
   .list-style();
 }
 
 .fieldset-impression {
   .fieldset();
   padding-bottom: 24px;
-  border-top: 1px solid #DBDBDB;
 }
 
 .fieldset-impression__list {
@@ -37,7 +37,6 @@
 .fieldset-visited {
   .fieldset();
   padding-bottom: 24px;
-  border-top: 1px solid #DBDBDB;
 }
 
 .fieldset-visited__list{
@@ -162,10 +161,6 @@
   border: none;
 }
 
-.textarea__title {
-  border-top: 1px solid #DBDBDB;
-}
-
 /* form-feedback__button*/
 .form-feedback__button {
   .font(21px, 26px, 700);
@@ -179,12 +174,17 @@
 
 
 @media (min-width: @tablet-width) {
-
   .form-fieldsets {
     grid-template-columns: 280px 298px;
     row-gap: 48px;
     column-gap: 70px;
   }
+
+  .fieldset-contacts__list {
+    justify-content: end;
+  }
+
+
 
   .fieldset-impression {
     grid-column: 1/-1;
@@ -219,7 +219,6 @@
 
 
 @media (min-width: @desktop-width) {
-
   .form-fieldsets {
     grid-template-columns: 430px 402px;
     row-gap: 56px;
@@ -229,6 +228,15 @@
   .fieldset__title {
     margin-bottom: 28px;
   }
+
+  .fieldset-impression__list .fieldset__input {
+    width: 430px;
+  }
+
+  .fieldset-contacts__list .fieldset__input {
+    width: 402px;
+  }
+
 
   .fieldset-impression__list {
     grid-template-columns: 1fr 1fr 1fr;

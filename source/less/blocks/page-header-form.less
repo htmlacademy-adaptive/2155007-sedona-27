@@ -1,0 +1,35 @@
+.page-header-form__container {
+  height: 158px;
+  width: 100%;
+  position: relative;
+  padding-bottom: 67px;
+  padding-top: 52px;
+  background-color: #E6E6FA;
+  background-image: url("../img/sedona_decor.svg"),
+                    url("../img/sedona_background.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom center, bottom right;
+  background-size: cover, cover;
+  box-sizing: border-box;
+}
+
+.page-header-form__image {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+   .page-header-form__container {
+    height: 290px;
+    padding-top: 95px;
+    padding-bottom: 117.4px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header-form__container {
+    height: 301px;
+    padding-top: 101px;
+    padding-bottom: 120.2px;
+  }
+}
