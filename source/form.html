@@ -14,40 +14,37 @@
       <a class="page-header__logo">
         <img class="page-header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип Седоны.">
       </a>
-      <nav class="page-nav">
+      <nav class="page-nav page-nav--closed">
         <button class="page-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
         <div class="page-nav__container">
-          <ul class="page-nav__list nav-list-part-one">
+          <ul class="page-nav__list">
             <li class="page-nav__item">
-              <a class="page-nav__link page-nav__link--current">Главная</a>
+              <a class="page-nav__link" href="index.html">Главная</a>
             </li>
             <li class="page-nav__item">
               <a class="page-nav__link" href="photo.html">Фото и видео</a>
             </li>
-          </ul>
-          <ul class="page-nav__list nav-list-part-two"
             <li class="page-nav__item">
-              <a class="page-nav__link" href="form.html">Форма отзыва</a>
+              <a class="page-nav__link page-nav__link--current">Форма отзыва</a>
             </li>
             <li class="page-nav__item">
               <a class="page-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
             </li>
           </ul>
-        </div>
-        <!--page_nav__container-->
+        </div><!--page_nav__container-->
       </nav>
+      <div class="page-header-form__container">
+        <img class="page-header-form__image" src="img/sedona_inner.svg" width="229" height="39" alt="Sedona.">
+      </div>
+
     </header>
     <main class="main-inner-form">
-      <section class="inner-header">
-        <div class="inner-header-form__container">
-          <img class="inner-header-form__image" src="img/sedona_inner.svg" width="229" height="39" alt="Sedona.">
-          <div class="inner-header-form__wrapper">
-            <h1 class="inner-header-form__title">Оставьте свой отзыв</h1>
-            <p class="inner-header-form__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p></div>
+      <section class="inner-header-form">
 
-        </div><!--inner_header__container-->
+        <h1 class="inner-header-form__title">Оставьте свой отзыв</h1>
+        <p class="inner-header-form__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </section>
       <section class="form-feedback">
         <div class="form-feedback__container">
@@ -57,15 +54,15 @@
               <legend class="fieldset-personal-data__title fieldset__title">Представьтесь:</legend>
               <ul class="fieldset-personal-data__list">
                 <li class="fieldset-personal-data__item">
-                  <label class="fieldset__label" id="name">Имя:</label>
+                  <label class="fieldset__label" for="name">Имя:</label>
                   <input class="fieldset__input" type="text" id="name" name="name" value="Пётр" required>
                 </li>
                 <li class="fieldset-personal-data__item">
-                  <label class="fieldset__label" id="family">Фамилия:</label>
+                  <label class="fieldset__label" for="family">Фамилия:</label>
                   <input class="fieldset__input" type="text" id="family" name="family" value="Пустота" required>
                 </li>
                 <li class="fieldset-personal-data__item">
-                  <label class="fieldset__label" id="patronymic">Отчество:</label>
+                  <label class="fieldset__label" for="patronymic">Отчество:</label>
                   <input class="fieldset__input" type="text" id="patronymic" name="patronymic" value="Викторович" required>
                 </li>
               </ul>
@@ -74,11 +71,11 @@
               <legend class="fieldset-contacts__title fieldset__title"> Контактная информация:</legend>
               <ul class="fieldset-contacts__list">
                 <li class="fieldset-contacts__item">
-                  <label class="fieldset__label" id="tel">Контактынй телефон:</label>
+                  <label class="fieldset__label" for="tel">Контактынй телефон:</label>
                   <input class="fieldset__input" type="tel" id="tel" name="tel" placeholder="Введите телефон" required>
                 </li>
                 <li class="fieldset-contacts__item">
-                  <label class="fieldset__label" id="email">Электронная почта:</label>
+                  <label class="fieldset__label" for="email">Электронная почта:</label>
                   <input class="fieldset__input" type="email" id="email" name="email" placeholder="Введите e-mail" required>
                 </li>
               </ul>
@@ -88,7 +85,7 @@
               <ul class="fieldset-impression__list">
                 <li class="fieldset-impression__item">
                   <label class="control">
-                    <input class="visually-hidden control_input" type="radio" name="impression" value="positive" checked>
+                    <input class="visually-hidden control-input" type="radio" name="impression" value="positive" checked>
                       <span class="control-mark"></span>
                       <span class="control-label">Скорее положительное</span>
                   </label>
@@ -143,7 +140,7 @@
               </ul>
             </fieldset><!--fieldset_visited-->
             <div class="textarea-emotions-wrapper">
-              <legend class="fieldset__title">Опишите свои эмоции:</legend>
+              <p class="fieldset__title textarea__title">Опишите свои эмоции:</p>
               <textarea class="textarea" id="emotions" name="emotions" rows="6">Опишите подробно все свои восторги </textarea>
             </div><!--textarea_emotions_wrapper-->
             <button class="form-feedback__button button" type="submit">Отправить отзыв</button>
@@ -207,5 +204,6 @@
     </div>
   </div>
 
+  <script src="./js/script.js"></script>
 </body>
 </html>

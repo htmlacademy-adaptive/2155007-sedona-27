@@ -1,3 +1,7 @@
+.video-block {
+  padding-top: 43px;
+}
+
 .video__title {
   .margin(0px, 50px);
   .font(18px, 26px, 700);
@@ -6,30 +10,44 @@
   text-transform: uppercase;
 }
 .video__intro {
-  .margin(0px, 0px);
+  .margin(0px, 38px);
   .font(14px, 21px, 400);
   color: @color-description;
   text-align: center;
   text-transform: uppercase;
 }
 
-
+.video__intro br {
+  display: none;
+}
 
 @media (min-width: @tablet-width) {
-  .video-block__text-container {
-    padding: 58px 101px 66px;
+  .video-block {
+    padding-top: 58px;
+    padding-bottom: 40px;
   }
+  .video__intro {
+    margin-bottom: 66px;
+  }
+
+  .video__intro br {
+    display: block;
+  }
+
   .video__image {
     width: 648px;
     height: 500px;
+    text-align: center;
   }
-
 }
 
 @media (min-width: @desktop-width) {
+  .video-block {
+    padding: 62px 201px 64px 199px;
+  }
+
   .video__image {
     width: 800px;
     height: 500px;
   }
-
 }
