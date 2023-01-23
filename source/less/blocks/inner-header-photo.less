@@ -1,9 +1,37 @@
-.inner-header-photo__image {
-  display: block;
+.inner-header-photo__container {
+  height: 158px;
+  width: 100%;
+  position: relative;
+  padding-bottom: 67px;
+  padding-top: 52px;
+  background-color: #E6E6FA;
+  background-image: url("../img/sedona_background.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom center, bottom right;
+  background-size: cover, cover;
+  box-sizing: border-box;
+
+  &::before {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 57px;
+    background-image: url("../img/intro-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    z-index: 1;
+    content: "";
+  }
 }
 
-.inner-header-photo__wrapper {
-  padding: 30px 20px 16px;
+.inner-header-photo__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.inner-header-photo__text-wrapper {
+  padding: 38px 20px 62px;
 }
 
 .inner-header-photo__title {
@@ -22,19 +50,39 @@
   text-transform: uppercase;
 }
 
+.inner-header-photo__intro br {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
-  .inner-header-photo__wrapper {
+  .inner-header-photo__container {
+    height: 290px;
+    padding-top: 95px;
+    padding-bottom: 117.4px;
+  }
+
+  .inner-header-photo__text-wrapper {
     padding: 66px 155px 67px;
   }
 
   .inner-header-photo__title {
-    .margin(0px, 24px);
+    .margin(0px, 32px);
     .font(30px, 26px, 700);
-}
+  }
+
+  .inner-header-photo__intro br {
+    display: inline;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .inner-header-photo__wrapper {
-    padding: 104px 372px 69px 370px;
+  .inner-header-photo__container {
+    height: 301px;
+    padding-top: 101px;
+    padding-bottom: 120.2px;
+  }
+
+  .inner-header-photo__text-wrapper {
+    padding: 98px 370px 88px 370px;
   }
 }
