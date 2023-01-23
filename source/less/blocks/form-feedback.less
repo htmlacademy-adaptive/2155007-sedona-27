@@ -1,6 +1,9 @@
 .form-fieldsets {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .fieldset-personal-data {
@@ -9,7 +12,6 @@
 }
 
 .fieldset-personal-data__list {
-  display: grid;
   .list-style();
 }
 
@@ -19,7 +21,6 @@
 }
 
 .fieldset-contacts__list {
-  display: grid;
   .list-style();
 }
 
@@ -48,8 +49,6 @@
 .fieldset__title {
   margin-bottom: 20px;
   .font(18px, 26px, 700);
-  padding-left: 10px;
-  padding-right: 10px;
   color: @color-title;
   text-align: center;
   text-transform: uppercase;
@@ -65,22 +64,29 @@
 .fieldset__input {
   padding: 16px 16px 16px 16px;
   margin-bottom: 16px;
+  width: 280px;
   .font(18px, 26px, 700);
   color: @color-title;
   background-color: @lightgrey;
   border: none;
+  box-sizing: border-box;
+
   &:placeholder-shown {
     color: @color-placeholder;
   }
 }
+
 /*control*/
 //Mark
 
 .control {
   position: relative;
-  display: block;
-  padding-left: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 46px;
   height: 46px;
+  box-sizing: border-box;
 }
 
 .control-mark {
@@ -107,13 +113,13 @@
   left: 12px;
   width: 22px;
   height: 16px;
-  background-image: url("/img/icons/mark.svg");
+  background-image: url("../img/icons/mark.svg");
   background-repeat: no-repeat;
   background-position: center;
   content: "";
 
   &:hover {
-    background-image: url("/img/icons/mark-active.svg");
+    background-image: url("../img/icons/mark-active.svg");
   }
 }
 
@@ -145,6 +151,7 @@
 .control-label {
   padding-top: 10px;
   padding-bottom: 10px;
+  font-family: "PT Sans";
   .font(18px, 26px, 700);
   color: @color-title;
   text-align: center;
@@ -164,6 +171,7 @@
 /* form-feedback__button*/
 .form-feedback__button {
   .font(21px, 26px, 700);
+  width: 100%;
   font-family: inherit;
   color: #ffffff;
   text-transform: uppercase;
@@ -177,14 +185,14 @@
   .form-fieldsets {
     grid-template-columns: 280px 298px;
     row-gap: 48px;
-    column-gap: 70px;
+    column-gap: 52px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   .fieldset-contacts__list {
-    justify-content: end;
+    padding-left: 18px;
   }
-
-
 
   .fieldset-impression {
     grid-column: 1/-1;
@@ -193,8 +201,13 @@
   .fieldset-impression__list {
     grid-template-columns: 1fr 1fr;
     column-gap: 16px;
+    row-gap: 16px;
     padding-left: 36px;
     padding-right: 36px;
+  }
+
+  .fieldset-impression__list .control-label {
+    width: 234px;
   }
 
   .fieldset-visited {
@@ -204,39 +217,50 @@
   .fieldset-visited__list {
     grid-template-columns: 1fr 1fr;
     column-gap: 32px;
+    row-gap: 16px;
     padding-left: 84px;
     padding-right: 84px;
+  }
+
+  .fieldset-visited__list .control-label {
+    width: 178px;
   }
 
   .textarea-emotions-wrapper {
     grid-column: 1/-1;
   }
 
+  .fieldset__title {
+    margin-bottom: 20px;
+    .font(21px, 26px, 700);
+  }
+
   .form-feedback__button {
     padding: 16px 71px;
+    width: 324px;
   }
 }
-
 
 @media (min-width: @desktop-width) {
   .form-fieldsets {
     grid-template-columns: 430px 402px;
     row-gap: 56px;
     column-gap: 128px;
+    padding-left: 120px;
+    padding-right: 120px;
   }
 
   .fieldset__title {
     margin-bottom: 28px;
   }
 
-  .fieldset-impression__list .fieldset__input {
+  .fieldset-personal-data__list .fieldset__input {
     width: 430px;
   }
 
   .fieldset-contacts__list .fieldset__input {
     width: 402px;
   }
-
 
   .fieldset-impression__list {
     grid-template-columns: 1fr 1fr 1fr;
@@ -247,13 +271,13 @@
 
   .fieldset-visited__list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 28px;
+    column-gap: 64px;
     padding-left: 44.5px;
     padding-right: 44.5px;
   }
 
   .form-feedback__button {
     padding: 16px 101px;
+    width: 384px;
   }
-
 }
