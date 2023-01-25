@@ -1,14 +1,15 @@
 .inner-header-photo__container {
+  position: relative;
   height: 158px;
   width: 100%;
-  position: relative;
+  margin: 0 auto;
   padding-bottom: 67px;
   padding-top: 52px;
-  background-color: #E6E6FA;
-  background-image: url("../img/sedona_background.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: bottom center, bottom right;
-  background-size: cover, cover;
+  background-color: @bg-hero;
+  background-image: url("../img/mobile/sedona-background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
   box-sizing: border-box;
 
   &::before {
@@ -22,6 +23,12 @@
     background-position: bottom center;
     z-index: 1;
     content: "";
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .hero-block__container {
+    background-image: url("../img/mobile/sedona-background-mobile@2x.jpg");
   }
 }
 
@@ -59,6 +66,12 @@
     height: 290px;
     padding-top: 95px;
     padding-bottom: 117.4px;
+    background-image: url("../img/tablet/sedona-background-tablet.jpg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/tablet/sedona-background-tablet@2x.jpg");
+    background-size: 1338px auto;
   }
 
   .inner-header-photo__text-wrapper {
@@ -80,6 +93,13 @@
     height: 301px;
     padding-top: 101px;
     padding-bottom: 120.2px;
+    background-image: url("../img/desktop/sedona-background-desktop.jpg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    .hero-block__container {
+      background-image: url("../img/desktop/sedona-background-desktop@2x.jpg");
+    }
   }
 
   .inner-header-photo__text-wrapper {
