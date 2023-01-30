@@ -2,21 +2,25 @@
 <html class="page">
 
 <head>
-  <meta charset="8-utf">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cедона</title>
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/ptsans.woff" as="font">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
 </head>
 
 <body class="page__body">
   <div class="page__container">
     <svg style="display:none">
 
-      <symbol viewBox="0 0 23 21" fill="none" id="like-icon">
+      <symbol viewBox="0 0 23 21" id="like-icon">
         <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
       </symbol>
 
@@ -39,7 +43,7 @@
 
 
     <header class="page-header">
-      <a class="page-header__logo">
+      <a class="page-header__logo" href="index.html">
         <img class="page-header__image" src="img/logo.svg" width="185" height="96" alt="Логотип Седоны.">
       </a>
       <nav class="page-nav page-nav--photo page-nav--closed">
@@ -68,8 +72,8 @@
       <section class="inner-header-photo">
         <div class="inner-header-photo__container">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/desktop/sedona-inner-desktop.svg" width="459.5" height="79.8">
-            <source media="(min-width: 768px)" srcset="img/tablet/sedona-inner-tablet.svg" width="457" height="77.6">
+            <source media="(min-width: 1200px)" srcset="img/desktop/sedona-inner-desktop.svg" width="456" height="80">
+            <source media="(min-width: 768px)" srcset="img/tablet/sedona-inner-tablet.svg" width="457" height="78">
             <img class="inner-header-photo__image" src="img/mobile/sedona-inner-mobile.svg" width="229" height="39" alt="Sedona.">
           </picture>
         </div>
@@ -79,12 +83,16 @@
           </p>
         </div>
       </section>
-      <section class="photo-block">
+      <section class="photo">
         <h2 class="visually-hidden">Фото Седоны.</h2>
           <ul class="photo__list">
             <li class="photo__item">
               <a class="photo__link" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/desktop/peoples-spaces-desktop.webp 1x, img/desktop/peoples-spaces-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/peoples-spaces-tablet.webp 1x, img/tablet/peoples-spaces-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/mobile/peoples-spaces-mobile.webp 1x, img/mobile/peoples-spaces-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1200px)" srcset="img/desktop/peoples-spaces-desktop.jpg 1x, img/desktop/peoples-spaces-desktop@2x.jpg 2x" width="1200" height="400">
                   <source media="(min-width: 768px)" srcset="img/tablet/peoples-spaces-tablet.jpg 1x, img/tablet/peoples-spaces-tablet@2x.jpg 2x" width="648" height="400">
                   <img class="photo__image" src="img/mobile/peoples-spaces-mobile.jpg" width="280" height="280" srcset="img/mobile/peoples-spaces-mobile@2x.jpg 2x" alt="Дорога .посреди зелени на фоне вечернего заката и скалистых холмов.">
@@ -108,6 +116,10 @@
             <li class="photo__item">
               <a class="photo__link" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/desktop/local_vegetation-desktop.webp 1x, img/desktop/local_vegetation-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/local_vegetation-tablet.webp 1x, img/tablet/local_vegetation-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/mobile/local_vegetation-mobile.webp 1x,img/mobile/local_vegetation-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1200px)" srcset="img/desktop/local_vegetation-desktop.jpg 1x, img/desktop/local_vegetation-desktop@2x.jpg 2x" width="400" height="267">
                   <source media="(min-width: 768px)" srcset="img/tablet/local_vegetation-tablet.jpg 1x, img/tablet/local_vegetation-tablet@2x.jpg 2x" width="324" height="267">
                   <img class="photo__image" src="img/mobile/local_vegetation-mobile.jpg" width="280" height="280" srcset="img/mobile/local_vegetation-mobile@2x.jpg 2x" alt="Местная растительность на фоне скал">
@@ -131,6 +143,10 @@
             <li class="photo__item">
               <a class="photo__link" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/desktop/the_road_to_the_north-desktop.webp 1x, img/desktop/the_road_to_the_north-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/the_road_to_the_north-tablet.webp 1x, img/tablet/the_road_to_the_north-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/mobile/the_road_to_the_north-mobile.webp 1x, img/mobile/the_road_to_the_north-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1200px)" srcset="img/desktop/the_road_to_the_north-desktop.jpg 1x, img/desktop/the_road_to_the_north-desktop@2x.jpg 2x" width="400" height="267">
                   <source media="(min-width: 768px)" srcset="img/tablet/the_road_to_the_north-tablet.jpg 1x, img/tablet/the_road_to_the_north-tablet@2x.jpg 2x" width="324" height="267">
                   <img class="photo__image" src="img/mobile/the_road_to_the_north-mobile.jpg" width="280" height="280" srcset="img/mobile/the_road_to_the_north-mobile@2x.jpg 2x" alt="Дорога_проходящая скволь красивый вечнозеленый лес.">
@@ -154,9 +170,13 @@
             <li class="photo__item">
               <a class="photo__link" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/desktop/devils_bridge-desktop.webp 1x, img/desktop/devils_bridge-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/devils_bridge-tablet.webp 1x, img/tablet/devils_bridge-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="iimg/mobile/devils_bridge-mobile.webp 1x, img/mobile/devils_bridge-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1200px)" srcset="img/desktop/devils_bridge-desktop.jpg 1x, img/desktop/devils_bridge-desktop@2x.jpg 2x" width="400" height="267">
                   <source media="(min-width: 768px)" srcset="img/tablet/devils_bridge-tablet.jpg 1x, imgtablet//devils_bridge-tablet@2x.jpg 2x" width="324" height="267">
-                  <img class="photo__image" src="img/mobile/devils_bridge-mobile.jpg" width="280" height="280" src="img/mobile/devils_bridge-mobile@2x.jpg 2x" alt="Мост Дьявола.">
+                  <img class="photo__image" src="img/mobile/devils_bridge-mobile.jpg" width="280" height="280" srcset="img/mobile/devils_bridge-mobile@2x.jpg 2x" alt="Мост Дьявола.">
                 </picture>
                 <div class="photo__text-wrapper">
                   <div class="photo__text-container">
@@ -179,16 +199,16 @@
       <section class="video-block">
         <h2 class="visually-hidden">Видео Седоны.</h2>
           <div class="video-block__text-container">
-            <p class="video__title">Все еще сомневаетесь?</p>
-            <p class="video__intro">Смотрите видеопрезентацию и <br> скорее за билетами, пока они не подорожали в очередной раз!</p>
+            <p class="video-block__title">Все еще сомневаетесь?</p>
+            <p class="video-block__intro">Смотрите видеопрезентацию и <br> скорее за билетами, пока они <br> не подорожали в очередной раз!</p>
           </div>
-          <div class="video__container">
-            <button class="video__button" type="button">
+          <div class="video-block__container">
+            <button class="video-block__button" type="button">
               <span class="visually-hidden">
                 Воспроизвести.
               </span>
             </button>
-            <video class="video" width="280" poster="img/mobile/video-mobile.jpg">Your browser doesn't support HTML5</video>
+            <video class="video-block__video" width="280">Your browser doesn't support HTML5</video>
           </div>
       </section>
     </main>
@@ -231,6 +251,7 @@
         </a>
       </section>
     </footer>
+  </div><!--page__container-->
   <script src="./js/script.js"></script>
 </body>
 
