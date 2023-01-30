@@ -1,8 +1,8 @@
 .social {
   width: 156px;
   margin-bottom: 47px;
-
 }
+
 .social__block {
   display: flex;
   flex-wrap: wrap;
@@ -14,6 +14,7 @@
   width: 48px;
   height: 48px;
   background-color: @blue;
+
   &:not(:nth-child(3n+3)) {
     margin-right: 6px;
   }
@@ -43,8 +44,25 @@
   height: 24px;
 }
 
+.social__link:hover {
+  background-color: #669ec0;
+}
+
+.social__link:active {
+  background-color: #5496bd;
+  opacity: 0.3;
+}
+
 @media (min-width: @tablet-width) {
   .social {
     margin-bottom: 0;
+  }
+
+  .page-footer--photo .social {
+    margin-right: 16px;
+  }
+
+  .page-footer--form .social {
+    margin-right: 18px;
   }
 }

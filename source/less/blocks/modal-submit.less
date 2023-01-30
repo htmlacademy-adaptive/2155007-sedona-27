@@ -1,4 +1,4 @@
-modal-container-submit {
+.modal-container-submit {
   position: fixed;
   top: 0;
   left: 0;
@@ -14,22 +14,17 @@ modal-container-submit {
   margin: auto;
   box-sizing: border-box;
   background-color: #ffffff;
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
-
-/*.modal-submit__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}*/
 
 .modal-submit__text-wrapper {
-  padding: 39px 39px 30px 37px;
+  padding: 39px 39px 50px 37px;
+  box-sizing: border-box;
 }
 
-.modal-submit__title{
+.modal-submit__title {
   .font(18px, 26px, 700);
-  .margin(0px, 40px);
+  .margin(0px, 25px);
   color: @color-title;
   text-transform: uppercase;
   text-align: center;
@@ -43,7 +38,7 @@ modal-container-submit {
   text-align: center;
 }
 
-.button-wrapper {
+.modal-submit__button-wrapper {
   width: 100%;
   padding: 20px;
   background-color: @lightgrey;
@@ -51,14 +46,29 @@ modal-container-submit {
 }
 
 .modal-submit__button {
+  width: 280px;
   padding: 18px 62px 14px 60px;
+  font-family: inherit;
   .font(18px, 26px, 700);
   color: #ffffff;
   text-transform: uppercase;
   border: none;
   background-color: @blue;
-}
+  box-sizing: border-box;
 
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+}
 
 @media (min-width: @tablet-width) {
   .modal-submit {
@@ -66,29 +76,36 @@ modal-container-submit {
   }
 
   .modal-submit__text-wrapper {
-    padding: 52px 99px 30px 97px;
+    padding: 48px 99px 55px 97px;
   }
 
-
-  .modal-submit__title{
+  .modal-submit__title {
+    .margin(0px, 22px);
     .font(30px, 40px, 700);
   }
 
-  .button-wrapper {
+  .modal-submit__button-wrapper {
     padding: 44px 91px;
   }
 
   .modal-submit__button {
+    width: 458px;
     padding: 18.5px 108px 13.5px;
+    .font(21px, 26px, 700);
   }
 }
 
 @media (min-width: @desktop-width) {
-  .modal-submit__title{
+  .modal-submit__title {
+    .margin(0px, 25px);
     .font(30px, 40px, 700);
+  }
+
+  .modal-submit__text-wrapper {
+    padding: 56px 99px 48px 97px;
   }
 }
 
-/*.modal-container-submit--close {
+.modal-container-submit--close {
   display: none;
-}*/
+}

@@ -25,7 +25,7 @@
   display: none;
 }
 
-.button--search-hotel{
+.button--search-hotel {
   padding: 16px 49px;
   .font(21px, 26px, 700);
   color: #ffffff;
@@ -34,6 +34,19 @@
   text-align: center;
   background-color: @blue;
   box-sizing: border-box;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
 
 .map-responsive {
@@ -41,7 +54,7 @@
   overflow: hidden;
 }
 
-.map-responsive iframe{
+.map-responsive iframe {
   width: 100%;
   border: none;
   display: block;
@@ -65,13 +78,13 @@
     display: inline;
   }
 
-  .button--search-hotel{
+  .button--search-hotel {
     width: 458px;
     padding: 14.5px 121px 17.5px;
   }
 
   .map-responsive {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 

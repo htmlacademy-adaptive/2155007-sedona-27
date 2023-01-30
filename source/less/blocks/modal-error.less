@@ -1,4 +1,4 @@
-modal-container-error {
+.modal-container-error {
   position: fixed;
   top: 0;
   left: 0;
@@ -14,8 +14,9 @@ modal-container-error {
   margin: auto;
   box-sizing: border-box;
   background-color: #ffffff;
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
+
 .modal-error__content {
   display: flex;
   flex-direction: column;
@@ -23,14 +24,20 @@ modal-container-error {
   padding: 45px 42px 35px;
 }
 
-.modal-error__title{
+.modal-error__title {
   .font(18px, 26px, 700);
+  .margin(0px, 24px);
   color: @color-title;
   text-transform: uppercase;
-  text-align: center
+  text-align: center;
+}
+
+.modal-error__title br {
+  display: none;
 }
 
 .modal-error__description {
+  .margin(0px, 28px);
   .font(14px, 21px, 400);
   color: @color-description;
   text-transform: uppercase;
@@ -38,12 +45,28 @@ modal-container-error {
 }
 
 .modal-error__button {
+  width: 180px;
   padding: 18px 64px 14px;
+  font-family: inherit;
   .font(18px, 26px, 700);
   color: #ffffff;
   text-transform: uppercase;
   border: none;
   background-color: @blue;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
 
 
@@ -56,21 +79,37 @@ modal-container-error {
     padding: 50px 46px 48px;
   }
 
-  .modal-error__title{
+  .modal-error__title {
+    .margin(0px, 24px);
     .font(30px, 40px, 700);
   }
 
+  .modal-error__description {
+    .margin(0px, 45px);
+  }
+
+  .modal-error__title br {
+    display: inline;
+  }
+
   .modal-error__button {
+    width: 272px;
     padding: 18.5px 108px 13.5px;
+    .font(21px, 26px, 700);
   }
 }
 
 @media (min-width: @desktop-width) {
   .modal-error__content {
-    padding: 60px 46px 48px;
+    padding: 48px 46px 48px;
   }
 
-  .modal-error__title{
+  .modal-error__title {
     .font(30px, 40px, 700);
   }
+}
+
+
+.modal-container-error--close {
+  display: none;
 }
