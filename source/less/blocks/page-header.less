@@ -1,13 +1,13 @@
 .page-header {
   position: relative;
-  height: 56px;
+  display: flex;
+  flex-direction: column;
+  min-height: 56px;
   background-color: #ffffff;
 }
 
 .page-header__logo {
-  position: absolute;
-  top: 0;
-  left: 67px;
+  margin: 0 auto;
   z-index: 1;
 }
 
@@ -15,17 +15,16 @@
   display: block;
 }
 
-
 @media (min-width: @tablet-width) {
-  .page-header__logo {
-    top: 0;
-    left: 291px;
+  .page-header {
+    display: block;
   }
 
-  .page-header-form__container {
-    height: 290px;
-    padding-top: 95px;
-    padding-bottom: 117.4px;
+  .page-header__logo {
+    position: absolute;
+    top: 0;
+    left: 291px;
+    z-index: 1;
   }
 }
 
@@ -33,11 +32,5 @@
   .page-header__logo {
     top: 0;
     left: 507px;
-  }
-
-  .page-header-form__container {
-    height: 301px;
-    padding-top: 101px;
-    padding-bottom: 120.2px;
   }
 }

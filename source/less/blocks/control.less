@@ -1,0 +1,86 @@
+//control
+.control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 62px;
+  height: 46px;
+  box-sizing: border-box;
+}
+
+//mark
+.control-mark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  width: 22px;
+  height: 16px;
+  background-image: url("../img/sprite.svg#mark");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+}
+
+// Radio
+.control-input[type="radio"] {
+  & + .control-mark {
+    border-radius: 50%;
+  }
+
+  &:checked + .control-mark::before {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 16px;
+    height: 16px;
+    background-color: #333333;
+    border-radius: 50%;
+    content: "";
+  }
+}
+
+.control-input:hover + .control-mark {
+  background-color: #d5d5d5;
+}
+
+.control-input:active + .control-mark {
+  background-color: #d5d5d5;
+}
+
+.control-input:active:checked + .control-mark::before {
+  opacity: 0.3;
+}
+
+.control-input:focus + .control-mark {
+  outline: 2px solid #000000;
+}
+
+.control-input:disabled + .control-mark {
+  background-color: #b3b3b3;
+}
+
+.control-input:disabled:checked + .control-mark::before {
+  opacity: 0.6;
+}
+
+// Control-label
+.control-label {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: inherit;
+  .font(18px, 26px, 700);
+  color: @color-title;
+  text-align: center;
+  vertical-align: middle;
+}
