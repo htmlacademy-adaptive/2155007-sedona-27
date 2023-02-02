@@ -8,7 +8,7 @@ import rename from 'gulp-rename';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
-import svgstore from 'gulp-svgstore';
+import { stacksvg } from 'gulp-stacksvg';
 import del from 'del';
 import browser from 'browser-sync';
 
@@ -76,10 +76,7 @@ const svg = () =>
 const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
   .pipe(svgo())
-  .pipe(svgstore({
-  inlineSvg: true
-  }))
-  .pipe(rename('sprite.svg'))
+  .pipe(stacksvg({ output: 'sprite.svg' }))
   .pipe(gulp.dest('build/img'));
   }
 
